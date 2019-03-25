@@ -24,9 +24,11 @@ Would be #1 on [code-golf.io](https://code-golf.io) if `\r` worked.
 - `^M` is used as a shorter alternative to `\r` or `\\r`.
 - The `$_` variable which contains `FizzBuzz` is accessed by splicing the string.
 
+**NOTE**: Literal `^M` is used in place of `Ctrl V+Ctrl Enter`.
+
 ```sh
 FizzBuzz
-echo {1..100}${_::++i%3?0:4}${_:i%5?8:4}"
+echo ^M{1..100}^M${_::++i%3?0:4}${_:i%5?8:4}"
 "
 ```
 
