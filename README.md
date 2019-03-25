@@ -34,6 +34,8 @@ echo ^M{1..100}^M${_::++i%3?0:4}${_:i%5?8:4}"
 
 **Alternative attempts**
 
+Currently #2 on [code-golf.io](https://code-golf.io).
+
 ```sh
 for((;i++<100;)){
 FizzBuzz$i
