@@ -2,7 +2,19 @@
 
 All of the below code snippets are MIT licensed and written solely by myself. These solutions will no longer be published on any code golfing websites as they are not credible regarding copycats and stolen code.
 
-## Leap Years
+
+## Table of Contents
+
+<!-- vim-markdown-toc GFM -->
+
+* [Leap Years (44 bytes)](#leap-years-44-bytes)
+* [Fibonacci (34 bytes)](#fibonacci-34-bytes)
+* [Fizz Buzz (63 bytes)](#fizz-buzz-63-bytes)
+
+<!-- vim-markdown-toc -->
+
+
+## Leap Years (44 bytes)
 
 Print all leap years between `1800` and `2400`.
 
@@ -15,7 +27,7 @@ set {1804..2400..4}
 history -p ${@%?[^04]00}
 ```
 
-## Fibonacci
+## Fibonacci (34 bytes)
 
 Print the Fibonacci sequence up to `31`.
 
@@ -31,7 +43,7 @@ printf %d"
 " $[i+=_,_=i-_]{a..C}
 ```
 
-## Fizz Buzz
+## Fizz Buzz (63 bytes)
 
 Print Fizz Buzz up to 100.
 
