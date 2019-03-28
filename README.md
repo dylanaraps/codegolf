@@ -80,6 +80,6 @@ Print prime numbers up to 100.
 
 ```sh
 for((;i++<97;)){
-eval let k+=i%{1..$i}?0:1 k==2&&echo $i;k=
+k= eval let k+=i%{1..$i}?0:1 k==2&&echo $i
 }
 ```
