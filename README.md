@@ -76,10 +76,9 @@ Print prime numbers up to 100.
 - Run with `2>/dev/null`.
 - Loop over `1` to `97`.
 - Abuse brace expansion to check divisors.
+- Abuse `let` and `eval`.
 - ...
 
 ```sh
-for((;i++<97;)){
-eval let k=1 k+=i%{1..$i}?0:1
-((k==3))&&echo $i;}
+for((;i++<97;)){ eval let k=1 k+=i%{1..$i}?0:1 k==3&&echo $i;}
 ```
