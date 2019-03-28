@@ -11,7 +11,7 @@ All of the below code snippets are MIT licensed and written solely by myself. Th
 * [Fibonacci (34 bytes)](#fibonacci-34-bytes)
 * [Fizz Buzz (63 bytes)](#fizz-buzz-63-bytes)
 * [Niven/Harshad Numbers (45 bytes)](#nivenharshad-numbers-45-bytes)
-* [Prime Numbers (70 bytes)](#prime-numbers-70-bytes)
+* [Prime Numbers (66 bytes)](#prime-numbers-66-bytes)
 
 <!-- vim-markdown-toc -->
 
@@ -69,16 +69,17 @@ Print Niven/Harshad up to 100.
 for((;i++<100;)){((i%(i%10+i/10)))||echo $i;}
 ```
 
-## Prime Numbers (70 bytes)
+## Prime Numbers (66 bytes)
 
 Print prime numbers up to 100.
 
 - Run with `2>/dev/null`.
 - Loop over `1` to `97`.
+- Abuse brace expansion to check divisors.
 - ...
 
 ```sh
-for((;k=j=1,i++<97;)){
-$[k+=j<i&(i%j++?0:1)]{a..g}
-((k==2))&&echo $i;}
+for((;i++<97;)){
+eval let k=1 k+=i%{1..$i}?0:1
+((k==3))&&echo $i;}
 ```
