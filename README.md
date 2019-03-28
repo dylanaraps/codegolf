@@ -73,7 +73,6 @@ for((;i++<100;)){((i%(i%10+i/10)))||echo $i;}
 
 Print prime numbers up to 100.
 
-- Run with `2>/dev/null`.
 - Loop over `1` to `97`.
 - Abuse brace expansion to check divisors.
 - Abuse `let` and `eval`.
