@@ -10,6 +10,7 @@ All of the below code snippets are MIT licensed and written solely by myself. Th
 * [Leap Years (44 bytes)](#leap-years-44-bytes)
 * [Fibonacci (34 bytes)](#fibonacci-34-bytes)
 * [Fizz Buzz (63 bytes)](#fizz-buzz-63-bytes)
+* [Niven/Harshad Numbers (45 bytes)](#nivenharshad-numbers-45-bytes)
 
 <!-- vim-markdown-toc -->
 
@@ -57,4 +58,12 @@ for((;i++<100;)){
 FizzBuzz$i
 echo ${_:i%3?i%5?8:4:0:i%15?4:8}
 }
+```
+
+## Niven/Harshad Numbers (45 bytes)
+
+Print Niven/Harshad up to 100.
+
+```sh
+for((;i++<100;)){((i%(i%10+i/10)))||echo $i;}
 ```
