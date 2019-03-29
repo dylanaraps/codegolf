@@ -79,7 +79,7 @@ Print prime numbers up to 100.
 - ...
 
 ```sh
-for((;i++<97;k=0)){
-let k+=i%{1..97}?0:1 k^2||echo $i
+for((;i++<97;j=0)){
+let j+=i%{1..97}?0:1 j^2||echo $i
 }
 ```
