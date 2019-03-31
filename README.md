@@ -12,6 +12,7 @@ All of the below code snippets are MIT licensed and written solely by myself. Th
 * [Fizz Buzz (63 bytes)](#fizz-buzz-63-bytes)
 * [Niven/Harshad Numbers (45 bytes)](#nivenharshad-numbers-45-bytes)
 * [Prime Numbers (54 bytes)](#prime-numbers-54-bytes)
+* [Divisors (55 Bytes)](#divisors-55-bytes)
 
 <!-- vim-markdown-toc -->
 
@@ -82,4 +83,14 @@ Print prime numbers up to 100.
 for((;j=i++<97;)){
 let j+=i%{1..97}?0:1,j^3||echo $i
 }
+```
+
+## Divisors (55 Bytes)
+
+- Loop over `1` to `100`.
+- Use brace expansion too loop over `1` to `100`.
+- Set the divisors to `$@`.
+
+```sh
+for((;i++<100;)){(set $[i%++j?0:{1..100}];echo ${@#0})}
 ```
