@@ -87,6 +87,8 @@ let j+=i%{1..97}?0:1,j^3||echo $i
 
 ## Divisors (55 Bytes)
 
+Print divisors of 1 to 100.
+
 - Loop over `1` to `100`.
 - Use brace expansion too loop over `1` to `100`.
 - Set the divisors to `$@`.
